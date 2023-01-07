@@ -56,12 +56,10 @@ while True:
     action = input('Vuoi criptare o decriptare un file? (C/D)')
     if action.upper() == 'C':
         password = input('Inserisci la password: ')
-        # os.chdir(os.pardir) # Utizzo sono nel deploy di pyinstaller
         file_in = input('Inserisci il percorso del file da criptare [Lasciare vuoto per la directory attuale] [Il nome del file si deve chiamare "file_decriptato.keys"]: ')
         file_in = 'file_decriptato.keys'
         encrypt(password, 'file_decriptato.keys', 'file_criptato.bin')
     if action.upper() == 'D':
-        # os.chdir(os.pardir) # Utizzo sono nel deploy di pyinstaller
         file_out = input('Inserisci il percorso del file criptato [Lasciare vuoto per la directory attuale] [Il nome del file si deve chiamare "file_criptato.bin"]: ')
         file_out = 'file_criptato.bin'
         password = input('Inserisci la password: ')
